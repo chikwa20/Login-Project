@@ -1,0 +1,549 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-card {
+    position: relative;
+    margin-top: 10vh;
+    margin-bottom: 10vh ;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 56px 48px;
+    border-radius: 28px;
+    width: 420px;
+    box-sizing: border-box;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.12),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.login-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+.logtext {
+    position: relative;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+    text-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+    margin-bottom: 28px;
+}
+
+
+.login-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 24px;
+    animation: iconFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.4));
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+.wholebody {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    background: 
+        radial-gradient(circle at 15% 50%, rgba(120, 86, 255, 0.15) 0%, transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(99, 102, 241, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 50% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 25%),
+        linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #0f172a 100%);
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.inbox {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.inbox input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 24px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    font-size: 1rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+    color: #ffffff;
+    outline: none;
+    letter-spacing: 0.2px;
+}
+
+.inbox input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: 400;
+}
+
+.inbox input:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.06) 100%);
+}
+
+.inbox input:focus {
+    border-color: #818cf8;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.08) 100%);
+    box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.2);
+}
+
+/* Label styling */
+.inbox label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+.message {
+    align-items: center;
+}
+
+/* Semantic class for screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Message card improvements */
+.message-card {
+    position: relative;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 28px;
+    padding: 56px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    
+}
+
+.message-content p {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.message-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.message-header h1 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 2.75rem;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+
+
+@keyframes successPulse {
+    0%, 100% {
+        box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 8px 40px rgba(99, 102, 241, 0.7);
+        transform: scale(1.05);
+    }
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.message-content p {
+    margin: 0;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.15) 100%);
+    border-radius: 16px;
+    
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.message-content p::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 20px;
+    bottom: 20px;
+    width: 3px;
+    
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+.message-content p:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.25) 100%);
+    transform: translateX(8px);
+    border-left-color: #818cf8;
+}
+
+.message-footer {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+.message-footer p {
+    color: rgba(255, 255, 255, 0.65);
+    margin: 14px 0;
+    font-style: italic;
+}
+
+.message-footer em {
+    font-style: italic;
+    color: #818cf8;
+}
+
+.message-footer strong {
+    color: #a78bfa;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.message-footer small {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+    letter-spacing: 0.3px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.55);
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+}
+
+.back-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Form actions */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+/* Signup text */
+.signup-text {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+}
+
+.signup-link {
+    color: #818cf8;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    padding: 2px 0;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+}
+
+.signup-link:hover {
+    color: #a78bfa;
+    border-bottom-color: #a78bfa;
+    transform: translateX(4px);
+}
+
+/* Button styling */
+.login-btn {
+    display: inline-block;
+    padding: 20px 48px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    width: 100%;
+    letter-spacing: 0.4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.6);
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #a78bfa 100%);
+}
+
+.login-btn:hover::before {
+    left: 100%;
+}
+
+.login-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.5);
+}
+
+.login-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.25), 0 8px 20px rgba(99, 102, 241, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wholebody {
+        padding: 24px;
+    }
+    
+    .login-card {
+        width: 100%;
+        max-width: 420px;
+        padding: 48px 36px;
+        margin-top: 8vh;
+        border-radius: 24px;
+    }
+    
+    .logtext {
+        font-size: 2.75rem;
+    }
+    
+    .login-icon {
+        font-size: 3.5rem;
+    }
+    
+    .inbox input {
+        padding: 18px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .login-btn {
+        padding: 18px 36px;
+        font-size: 1rem;
+    }
+    
+    .signup-text {
+        font-size: 0.95rem;
+    }
+    
+    .message-header h1 {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 40px 28px;
+        margin-top: 6vh;
+        border-radius: 22px;
+    }
+    
+    .logtext {
+        font-size: 2.25rem;
+        margin-bottom: 24px;
+    }
+    
+    .login-icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    
+    .inbox {
+        gap: 20px;
+    }
+    
+    .inbox input {
+        padding: 16px 20px;
+        font-size: 0.95rem;
+        border-radius: 16px;
+    }
+    
+    .login-btn {
+        padding: 16px 32px;
+        font-size: 1rem;
+    }
+    
+    .form-actions {
+        margin-top: 24px;
+    }
+    
+    .signup-text {
+        font-size: 0.9rem;
+    }
+    
+    .back-btn {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+    }
+    
+    .message-header h1 {
+        font-size: 2rem;
+    }
+    
+    .status-badge {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    
+    .back-btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .logtext {
+        font-size: 2rem;
+    }
+    
+    .login-card {
+        padding: 32px 20px;
+        margin-top: 5vh;
+        border-radius: 20px;
+    }
+    
+    .login-icon {
+        font-size: 2.5rem;
+    }
+    
+    .inbox {
+        gap: 16px;
+    }
+    
+    .inbox label {
+        font-size: 0.8rem;
+    }
+    
+    .inbox input {
+        padding: 14px 18px;
+        font-size: 0.9rem;
+    }
+    
+    .login-btn {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+    }
+    
+    .signup-text {
+        font-size: 0.85rem;
+    }
+    
+    .message-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .status-badge {
+        width: 45px;
+        height: 45px;
+        font-size: 1.75rem;
+    }
+    
+    .message-content p {
+        padding: 16px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .message-footer p {
+        font-size: 0.9rem;
+    }
+    
+    .back-btn {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+    }
+}
