@@ -177,6 +177,13 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .message-card {
+        margin-left: 10vh;
+        margin-right: 10vh;
+    }
+}
+
 @media (max-width: 768px) {
     .login-card {
         width: 100%;
@@ -186,8 +193,47 @@
         border-radius: 24px;
     }
     
+    .message-card {
+        margin-left: 5vh;
+        margin-right: 5vh;
+        padding: 48px 32px;
+    }
+    
     .message-header h1 {
         font-size: 2.25rem;
+    }
+    
+    .message-content {
+        font-size: 1rem;
+        gap: 24px;
+    }
+    
+    .message-header {
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .message-card {
+        margin-left: 3vh;
+        margin-right: 3vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 40px 28px;
+    }
+    
+    .message-header h1 {
+        font-size: 2rem;
+    }
+    
+    .message-content {
+        font-size: 0.95rem;
+        gap: 20px;
+    }
+    
+    .message-content p {
+        padding: 18px 20px;
     }
 }
 
@@ -198,8 +244,32 @@
         border-radius: 22px;
     }
     
+    .message-card {
+        margin: 3vh 2vh;
+        padding: 36px 24px;
+        border-radius: 24px;
+    }
+    
     .message-header h1 {
-        font-size: 2rem;
+        font-size: 1.85rem;
+    }
+    
+    .message-content {
+        font-size: 0.92rem;
+        gap: 18px;
+    }
+    
+    .message-content p {
+        padding: 16px 18px;
+    }
+    
+    .message-content p:hover {
+        transform: translateX(4px);
+    }
+    
+    .message-footer {
+        margin-top: 32px;
+        padding-top: 24px;
     }
     
     .status-badge {
@@ -216,8 +286,55 @@
         border-radius: 20px;
     }
     
+    .message-card {
+        margin: 2vh 1.5vh;
+        padding: 32px 20px;
+        border-radius: 20px;
+    }
+    
     .message-header h1 {
-        font-size: 1.75rem;
+        font-size: 1.65rem;
+        letter-spacing: -0.5px;
+    }
+    
+    .message-header {
+        margin-bottom: 28px;
+        padding-bottom: 20px;
+    }
+    
+    .message-content {
+        font-size: 0.88rem;
+        gap: 16px;
+        line-height: 1.65;
+    }
+    
+    .message-content p {
+        padding: 14px 16px;
+    }
+    
+    .message-content p::before {
+        left: 8px;
+        top: 14px;
+        bottom: 14px;
+        width: 2px;
+    }
+    
+    .message-footer {
+        margin-top: 28px;
+        padding-top: 20px;
+    }
+    
+    .message-footer p {
+        font-size: 0.85rem;
+        margin: 12px 0;
+    }
+    
+    .message-footer strong {
+        font-size: 1rem;
+    }
+    
+    .message-footer small {
+        font-size: 0.8rem;
     }
     
     .status-badge {
@@ -225,13 +342,26 @@
         height: 45px;
         font-size: 1.75rem;
     }
-    
-    .message-content p {
-        padding: 16px 20px;
-        font-size: 0.95rem;
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .message-card {
+        margin: 2vh 1vh;
+        padding: 28px 16px;
+        border-radius: 18px;
     }
     
-    .message-footer p {
-        font-size: 0.9rem;
+    .message-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .message-content {
+        font-size: 0.85rem;
+        gap: 14px;
+    }
+    
+    .message-content p {
+        padding: 12px 14px;
     }
 }
